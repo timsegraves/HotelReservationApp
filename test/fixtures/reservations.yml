@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  room: 
+  user: 
+  date: 2013-03-06
+
+two:
+  room: 
+  user: 
+  date: 2013-03-06

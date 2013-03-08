@@ -1,0 +1,19 @@
+.row
+  .span9
+    .room
+      =image_tag @room_type.photo.large.url, alt: @room_type.name, class: 'photo large img-polaroid'
+      %h1= @room_type.name
+      %p= @room_type.description
+      =render 'room_types/features', room_type: @room_type
+
+  .span3
+    .well
+      %h4 Reserve This Room
+      %p
+        %strong $#{@room_type.price} per night
+      =simple_form_for :reservation, url: room_reservations_path(@room_type), html: { class: 'form-inline' } do |f|
+        .input-prepend.input-append
+          %span.add-on
+            %i.icon-calendar
+          =f.text_field :date, value: Date.today, class: 'input-small', data: { behavior: 'datepicker', 'date-format' => 'yyyy-mm-dd' }
+          =f.submit 'Reserve', class: 'btn btn-primary'

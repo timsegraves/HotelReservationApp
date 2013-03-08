@@ -1,0 +1,11 @@
+.reservation
+  =image_tag reservation.room.photo.small.url, alt: reservation.room.name, class: 'photo small img-polaroid'
+  =link_to reservation.room.name, room_path(reservation.room.room_type), class: 'name'
+  %ul.features
+    %li
+      %i.icon-home
+      Room ##{reservation.room.number}
+    %li
+      %i.icon-calendar
+      =reservation.date
+  =link_to 'Cancel Reservation', reservation_path(reservation), method: :delete, confirm: 'Are you sure you want to cancel your reservation?', class: 'btn btn-danger'

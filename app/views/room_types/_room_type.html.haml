@@ -1,0 +1,5 @@
+.room
+  =link_to image_tag(room_type.photo.small.url, alt: room_type.name, class: 'photo small img-polaroid'), room_path(room_type)
+  =link_to room_type.name, room_path(room_type), class: 'name'
+  =render 'room_types/features', room_type: room_type
+  %strong $#{room_type.price} per night

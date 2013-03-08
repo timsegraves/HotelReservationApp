@@ -1,0 +1,12 @@
+%ul.features
+  %li
+    %i.icon-inbox
+    #{room_type.beds == 1 ? 'Single' : 'Double'} #{room_type.bed_size.capitalize}
+  -if room_type.non_smoking?
+    %li
+      %i.icon-ban-circle
+      Non-Smoking
+  -if room_type.handicapped_accessible?
+    %li
+      %i.icon-ok-sign
+      Handicapped Accessible

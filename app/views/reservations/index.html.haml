@@ -1,0 +1,10 @@
+%h1 Reservations
+
+-if @reservations.empty?
+  %p
+    You don't have any upcoming reservations.
+    #{link_to 'Find a room.', rooms_path}
+-else
+  %ul.reservations
+    -@reservations.each do |reservation|
+      %li= render reservation

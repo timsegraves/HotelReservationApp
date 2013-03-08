@@ -1,0 +1,7 @@
+user_name: sendgridusername
+password: sendgridpassword
+domain: localhost:3000
+address: smtp.sendgrid.net
+port: 587
+authentication: :plain
+enable_starttls_auto: true

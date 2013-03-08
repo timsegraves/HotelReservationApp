@@ -1,0 +1,20 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{data: { target: '.nav-collapse', toggle: 'collapse'} }
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =link_to 'Reservely', root_path, class: 'brand'
+      .container.nav-collapse
+        %ul.nav
+          =nav_link(rooms_page?) { link_to 'Rooms', rooms_path }
+          =nav_link(reservations_page?) { link_to 'Reservations', reservations_path }
+        %ul.nav.pull-right
+          -if user_signed_in?
+            =nav_link(account_page?) { link_to current_user.email, edit_user_registration_path }
+            =nav_divider
+            =nav_link { link_to 'Logout', destroy_user_session_path, method: :delete }
+          -else
+            =nav_link(login_page?) { link_to 'Login', new_user_session_path }
+            =nav_link(register_page?) { link_to 'Register', new_user_registration_path }

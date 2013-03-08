@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  beds: 1
+  bed_size: MyString
+
+two:
+  name: MyString
+  description: MyText
+  beds: 1
+  bed_size: MyString

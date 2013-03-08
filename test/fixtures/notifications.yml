@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  room_type: 
+  date: 2013-03-07
+
+two:
+  user: 
+  room_type: 
+  date: 2013-03-07

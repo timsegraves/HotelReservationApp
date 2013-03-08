@@ -1,0 +1,3 @@
+%h1 Greetings from Reservely!
+%p #{@notification.room_type.name} just opened up for #{@notification.date}.
+%p #{link_to 'Reserve this room now!', room_url(@notification.room_type)}

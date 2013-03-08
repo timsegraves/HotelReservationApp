@@ -1,0 +1,44 @@
+ul.reservations {
+  list-style: none outside none;
+  overflow: hidden;
+  margin: 0 0 20px;
+  padding: 0;
+  
+  > li {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.reservation {
+  position: relative;
+  height: 160px;
+  padding: 0 0 0 220px;
+  margin: 0 0 40px;
+  
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .name {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .features {
+    list-style: none outside none;
+    margin: 0 0 15px;
+    padding: 0;
+    
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
