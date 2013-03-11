@@ -8,4 +8,6 @@
     %li
       %i.icon-calendar
       =reservation.date
+      = " - "
+      = reservation.date + reservation.days
   =link_to 'Cancel Reservation', reservation_path(reservation), method: :delete, confirm: 'Are you sure you want to cancel your reservation?', class: 'btn btn-danger'

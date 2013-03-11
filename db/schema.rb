@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308031803) do
+ActiveRecord::Schema.define(:version => 20130311203708) do
 
   create_table "notifications", :force => true do |t|
     t.integer  "user_id",      :null => false
@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(:version => 20130308031803) do
   add_index "notifications", ["room_type_id", "user_id", "date"], :name => "index_notifications_on_room_type_id_and_user_id_and_date", :unique => true
 
   create_table "reservations", :force => true do |t|
-    t.integer  "room_id",    :null => false
-    t.integer  "user_id",    :null => false
-    t.date     "date",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "room_id",                   :null => false
+    t.integer  "user_id",                   :null => false
+    t.date     "date",                      :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "days",       :default => 1
   end
 
   add_index "reservations", ["room_id", "date"], :name => "index_reservations_on_room_id_and_date", :unique => true

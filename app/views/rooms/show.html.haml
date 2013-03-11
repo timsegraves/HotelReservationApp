@@ -16,4 +16,5 @@
           %span.add-on
             %i.icon-calendar
           =f.text_field :date, value: Date.today, class: 'input-small', data: { behavior: 'datepicker', 'date-format' => 'yyyy-mm-dd' }
+          =f.input :days
           =f.submit 'Reserve', class: 'btn btn-primary'
